@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"  /> 
+
+    <title>Greeting</title>
+  </head>
+  <body>
+    <!-- Static navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img alt="CSU" src="data:image/png;base64,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" width="90" height="70"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item" th:classappend="${content} == 'home' ? 'active' : ''">
+                <a class="nav-link" href="/">Home <span class="sr-only" th:if="${content} == 'home'">(current)</span></a>
+            </li>
+            <li class="nav-item" th:classappend="${content} == 'contact' ? 'active' : ''">
+                <a class="nav-link" href="/contact">Contact <span class="sr-only" th:if="${content} == 'contact'">(current)</span></a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <h1 class = "display-4"><p th:text="'Welcome to my website!'"></h1>
+        <!-- <h1 class = "display-4"><p th:text="'Hello, ' + ${name} + '!'" /></h1> -->
+        <p class="lead">In here, you can contact me, learn more about me, or post anything you'd like.</p>
+        <hr class="my-4">
+        <p>I am a suicide prevention advocate and I am very passionate about it.</p>
+        <a class="btn btn-primary btn-lg" href="/about" role="button">Learn more about me and my passions</a>
+    </div>
+
+    <!-- Added div to load image of the day with id -->
+    <!-- <div id="nasaAPOD">
+    </div> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+     <!-- Added jQuery Javascript -->  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+  </body>
+</html>
