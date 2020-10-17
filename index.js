@@ -16,6 +16,7 @@ app.use(express.static("public"));
 //tell app to use body-parser
 app.use(bodyParser.urlencoded({extended: true}));
 
+//fetch XKCD information and send to front end as JSON data
 app.get('/', function(req, res){
     fetch('http://xkcd.com/info.0.json')
     .then(res => res.json())
@@ -24,6 +25,8 @@ app.get('/', function(req, res){
     });
 });
 
+//fetch XKCD information and send to front end as JSON data
+//Will display a random comic from 1/1/2006 until 10/17/2020
 app.get('/random', function(req, res){
     let randComic = rand(1, 2373);
     fetch('http://xkcd.com/' + randComic +'/info.0.json')

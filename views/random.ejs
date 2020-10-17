@@ -32,12 +32,20 @@
 
     <div class="jumbotron">
         <h1 class = "display-4"><p th:text="'Welcome to my website!'"></h1>
-        <!-- <h1 class = "display-4"><p th:text="'Hello, ' + ${name} + '!'" /></h1> -->
-        <p class="lead">In here, you can contact me, learn more about me, or post anything you'd like.</p>
+        <p class="lead">Here's a Random Comic.</p>
         <hr class="my-4">
-        <p>I am a suicide prevention advocate and I am very passionate about it.</p>
-        <a class="btn btn-primary btn-lg" href="/random" role="button">Learn more about me and my passions</a>
+        <a class="btn btn-primary btn-lg" href="/random" role="button">Random Comic</a>
     </div>
+
+    <input type='button' name ='click me' id="refresh">
+    <script>
+    $(function() {
+        $("#refresh").on("click", function() {
+            $(".comic").load("index.ejs")
+            return false;
+        })
+    })
+    </script>
 
     <div class='comic'>
         <h1>Date: </h1> <p><%= data.day %>/<%= data.month %>/<%= data.year %></p>
