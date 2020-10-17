@@ -37,16 +37,6 @@
         <a class="btn btn-primary btn-lg" href="/random" role="button">Random Comic</a>
     </div>
 
-    <input type='button' name ='click me' id="refresh">
-    <script>
-    $(function() {
-        $("#refresh").on("click", function() {
-            $(".comic").load("index.ejs")
-            return false;
-        })
-    })
-    </script>
-
     <div class='comic'>
         <h1>Date: </h1> <p><%= data.day %>/<%= data.month %>/<%= data.year %></p>
         <h1><br>Title: </h1> <p><%= data.title %></p>
